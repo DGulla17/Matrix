@@ -8,7 +8,7 @@ public class Matrix {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        Scanner input = new Scanner(new File("matrix.txt"));
+        Scanner input = new Scanner(new File("C:\\Users\\gulla.davide\\Desktop\\matrix.txt"));
 // pre-read in the number of rows/columns
         int rows = 0;
         int columns = 1;
@@ -23,18 +23,17 @@ public class Matrix {
                 }
             }
         }
-
         System.out.println("matrix has " + rows + " rows and " + columns + " columns");
         int[][] a = new int[rows][columns];
 
-        input = new Scanner(new File("matrix.txt"));
+        input = new Scanner(new File("C:\\Users\\gulla.davide\\Desktop\\matrix.txt"));
 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; i < 3; i++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
                 if (input.hasNextInt()) {
-                    a[i][j] = input.nextInt();
-                }
-            }
+                    a[i][j] = input.nextInt();                   
+                }           
+            }         
         }
 
         for (int i = rows - 1; i >= 0; i--) {
@@ -46,4 +45,3 @@ public class Matrix {
     }
 
 }
-        
